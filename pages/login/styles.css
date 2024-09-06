@@ -1,0 +1,72 @@
+.login-options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+
+  & button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  & .btn-login-account {
+    border: 2px solid var(--yellow-500);
+    color: var(--yellow-500);
+
+    &:hover {
+      transform: scale(1.05);
+      background-color: var(--yellow-100);
+    }
+  }
+
+  & .btn-create-account {
+    color: var(--gray-500);
+    border: 2px solid var(--gray-500);
+
+    &:hover {
+      transform: scale(1.05);
+      background-color: var(--gray-100);
+    }
+  }
+
+}
+
+.login-info-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+
+  & span {
+    font-size: 0.75rem;
+  }
+
+  & .separator-line {
+    flex: 1;
+    height: 1px;
+    background-color: var(--gray-500);
+  }
+}
+
+.terms-of-use {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 0.75rem;
+  color: var(--gray-600);
+  gap: 0.25rem;
+
+  & span:last-child {
+    cursor: pointer;
+    color: var(--blue-500);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

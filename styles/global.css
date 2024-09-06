@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('./footers.css');
+@import url('./buttons.css');
+@import url('./headers.css');
+@import url('./form.css');
+@import url('./navigation.css');
+@import url('./utilities.css');
+@import url('./layouts.css');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto';
+}
+
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --yellow-100: #FEA91010;
+  --yellow-500: #FEA910;
+  --blue-500: #2D7FAD;
+  --gray-100: #EEEEEE;
+  --gray-200: #F8F8F8;
+  --gray-300: #FCFCFC;
+  --gray-400: #DADADA;
+  --gray-500: #858585;
+  --gray-600: #383842;
+  --gray-700: #4B5563;
+  --gray-800: #454545;
+  --gray-900: #1F2937;
+  --red-500: #E70000;
+  font-size: 16px;
+}
+
+
+button,
+a,
+input,
+textarea,
+select {
+  all: unset;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+select:focus {
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none;
+}
+
+input[type="password"]::-ms-reveal {
+  display: none;
+}
+
+input[type="password"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}

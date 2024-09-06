@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Paraíso</title>
+
+  <link rel="icon" href="../../assets/icons/favicon.ico" />
+  <link rel="stylesheet" href="../../styles/global.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div class="wrapper-type-02">
+    <header class="header-type-02">
+      <a href="../home/index.html">
+        <img src="../../assets/images/logo-yellow.png" alt="logo yellow" />
+      </a>
+      <div>
+        <img src="../../assets/icons/padlock.svg" alt="cadeado" />
+        <span>Ambiente seguro</span>
+      </div>
+    </header>
+    <main class="main-type-02">
+      <h1 class="title" 1>Cadastre seu Pet</h1>
+      <span class="subheading">
+        Complete os campos com as informações do seu Pet
+      </span>
+
+      <form id="form-register-pet" class="form-register-pet">
+        <div class="input-container">
+          <label>Nome*</label>
+          <input class="input-field" type="text" placeholder="Digite o nome" required />
+        </div>
+
+        <div class="input-container">
+          <label>Raça*</label>
+          <input class="input-field" type="text" placeholder="Digite a raça" required />
+        </div>
+        <div class="input-selects">
+
+          <div class="input-container input-type">
+            <label>Tipo</label>
+            <input type="text" name="type" id="input-type" class="input-field" placeholder="Selecione o tipo"
+              readonly />
+            <div class="dropdown hidden" id="dropdown-type">
+              <div class="list-dropdown" id="list-dropdown-type"></div>
+            </div>
+            <img id="icon-open-select-type" class="icon-form-type-01" src="../../assets/icons/arrow-down.svg"
+              alt="flecha para baixo" />
+            <img id="icon-close-select-type" class="icon-form-type-01 hidden" src="../../assets/icons/arrow-up.svg"
+              alt="flecha para cima" />
+          </div>
+
+          <div class="input-container input-temperament">
+            <label>Temperamento</label>
+            <input type="text" name="temperament" id="input-temperament" class="input-field"
+              placeholder="Selecione o temperamento" readonly />
+            <div class="dropdown hidden" id="dropdown-temperament">
+              <div class="list-dropdown" id="list-dropdown-temperament"></div>
+            </div>
+            <img id="icon-open-select-temperament" class="icon-form-type-01" src="../../assets/icons/arrow-down.svg"
+              alt="flecha para baixo" />
+            <img id="icon-close-select-temperament" class="icon-form-type-01 hidden"
+              src="../../assets/icons/arrow-up.svg" alt="flecha para cima" />
+          </div>
+        </div>
+
+        <button class="btn-create" type="submit">
+          Cadastrar o pet
+          <img src="../../assets//icons/arrow-right-to-line.svg" alt="cadeado" />
+        </button>
+
+        <button class="btn-back" id="btn-back" type="button">Voltar</button>
+      </form>
+    </main>
+    <footer class="footer-type-02">
+      <span>Copyright © 2024 Pet Paraíso - Todos os direitos reservados</span>
+    </footer>
+  </div>
+
+  <script type="module" src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+.form-acess-account {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  width: 100%;
+
+  & .forgot-password {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    margin-top: -1rem;
+    font-size: 0.875rem;
+    color: var(--yellow-500);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -34,7 +34,7 @@
 
     <main class="main-type-01">
       <div class="steps-container" id="steps-container"></div>
-      <form class="date-time-form" id="date-time-form">
+      <form class="store-form" id="store-form">
         <div class="pet-card">
           <div class="pet-info">
             <div class="pet-avatar">
@@ -47,37 +47,17 @@
           </div>
           <span class="pet-service-price">R$120,00</span>
         </div>
-        <h3 class="subtitle">Selecione a data</h3>
-        <div class="calendar-container">
-          <div class="calendar-header">
-            <button class="prev-month" type="button">
-              <img src="../../../assets/icons/arrow-left.svg" />
-            </button>
-            <span class="current-month-year" id="current-month-year"></span>
-            <button class="next-month" type="button">
-              <img src="../../../assets/icons/arrow-right.svg" />
-            </button>
-          </div>
+        <h3 class="subtitle">Selecione a loja de atendimento</h3>
 
-
-          <div class="calendar-weekdays">
-            <span>DOM</span><span>SEG</span><span>TER</span><span>QUA</span><span>QUI</span><span>SEX</span><span>SÁB</span>
+        <div class="input-container input-store">
+          <input type="text" name="type" id="input-store" class="input-field" placeholder="Selecione a loja" readonly />
+          <div class="dropdown hidden" id="dropdown-store">
+            <div class="list-dropdown" id="list-dropdown-store"></div>
           </div>
-          <div class="calendar-days" id="calendar-days"></div>
-
-        </div>
-
-        <h3 class="subtitle">Selecione o horário</h3>
-        <div class="schedule-container">
-          <div class="morning-schedule">
-            <span>Manhã</span>
-            <div class="time-slots" id="morning-slots"></div>
-          </div>
-          <div class="separator-line"></div>
-          <div class="afternoon-schedule">
-            <span>Tarde</span>
-            <div class="time-slots" id="afternoon-slots"></div>
-          </div>
+          <img id="icon-open-select-store" class="icon-form-type-02" src="../../../assets/icons/arrow-down.svg"
+            alt="flecha para baixo" />
+          <img id="icon-close-select-store" class="icon-form-type-02 hidden" src="../../../assets/icons/arrow-up.svg"
+            alt="flecha para cima" />
         </div>
 
         <div class="fixed-actions-container">
@@ -149,7 +129,7 @@
 
   </div>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 
 </html>

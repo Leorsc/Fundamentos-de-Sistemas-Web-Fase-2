@@ -34,56 +34,65 @@
 
     <main class="main-type-01">
       <div class="steps-container" id="steps-container"></div>
-      <form class="date-time-form" id="date-time-form">
-        <div class="pet-card">
-          <div class="pet-info">
-            <div class="pet-avatar">
-              <img src="../../../assets/images/dog.png" alt="dog avatar" />
+      <form class="review-confirmation-form" id="review-confirmation-form">
+        <h3 class="subtitle">Revise seu agendamento</h3>
+        <div class="review-confirmation-container">
+          <div class="pet-card">
+            <div class="pet-info">
+              <div class="pet-avatar">
+                <img src="../../../assets/images/dog.png" alt="dog avatar" />
+              </div>
+              <div class="pet-name-service">
+                <strong class="pet-name">Zeca</strong>
+                <span class="pet-service">Bulldog Francês</span>
+              </div>
             </div>
-            <div class="pet-name-service">
-              <strong class="pet-name">Zeca</strong>
-              <span class="pet-service">Banho & Tosa Higiênica (Hidratação)</span>
-            </div>
-          </div>
-          <span class="pet-service-price">R$120,00</span>
-        </div>
-        <h3 class="subtitle">Selecione a data</h3>
-        <div class="calendar-container">
-          <div class="calendar-header">
-            <button class="prev-month" type="button">
-              <img src="../../../assets/icons/arrow-left.svg" />
-            </button>
-            <span class="current-month-year" id="current-month-year"></span>
-            <button class="next-month" type="button">
-              <img src="../../../assets/icons/arrow-right.svg" />
-            </button>
           </div>
 
-
-          <div class="calendar-weekdays">
-            <span>DOM</span><span>SEG</span><span>TER</span><span>QUA</span><span>QUI</span><span>SEX</span><span>SÁB</span>
-          </div>
-          <div class="calendar-days" id="calendar-days"></div>
-
-        </div>
-
-        <h3 class="subtitle">Selecione o horário</h3>
-        <div class="schedule-container">
-          <div class="morning-schedule">
-            <span>Manhã</span>
-            <div class="time-slots" id="morning-slots"></div>
-          </div>
           <div class="separator-line"></div>
-          <div class="afternoon-schedule">
-            <span>Tarde</span>
-            <div class="time-slots" id="afternoon-slots"></div>
+
+          <div class="review-confirmation-card">
+            <div class="review-confirmation-avatar-info">
+              <img src="../../../assets/icons/service.svg" alt="service icon" />
+              <span>Banho & Tosa Tesoura (Hidratação)</span>
+            </div>
+            <img class="edit-icon" src="../../../assets/icons/edit.svg" alt="edit icon" />
+          </div>
+          <div class="review-confirmation-card">
+            <div class="review-confirmation-avatar-info">
+              <img src="../../../assets/icons/location-black.svg" alt="location icon" />
+              <span>Pet Paraíso Barra Shopping - Av. das Américas, 4666, Rio de Janeiro - RJ</span>
+            </div>
+            <img class="edit-icon" src="../../../assets/icons/edit.svg" alt="edit icon" />
+          </div>
+          <div class="review-confirmation-card">
+            <div class="review-confirmation-avatar-info">
+              <img src="../../../assets/icons/calendar.svg" alt="calendar icon" />
+              <span>09/09/2024 - 10:30</span>
+            </div>
+            <img class="edit-icon" src="../../../assets/icons/edit.svg" alt="edit icon" />
+          </div>
+          <div class="review-confirmation-card">
+            <div class="review-confirmation-avatar-info">
+              <img src="../../../assets/icons/man.svg" alt="man icon" />
+              <span>Rafael Oliveira Souza</span>
+            </div>
+            <img class="edit-icon" src="../../../assets/icons/edit.svg" alt="edit icon" />
+          </div>
+
+          <div class="separator-line"></div>
+          <div class="review-confirmation-card">
+            <div class="review-confirmation-avatar-info">
+              <img src="../../../assets/icons/currency.svg" alt="currency icon" />
+              <span>Total</span>
+            </div>
+            <span>R$120,00</span>
           </div>
         </div>
-
         <div class="fixed-actions-container">
           <div class="actions-buttons">
-            <button class="btn-create" type="submit" id="submit-button" disabled>
-              Avançar
+            <button class="btn-create" type="submit" id="submit-button">
+              Confirmar agendamento
               <img src="../../../assets/icons/arrow-right-to-line.svg" alt="cadeado" />
             </button>
 
@@ -148,7 +157,6 @@
     </footer>
 
   </div>
-
   <script src="script.js"></script>
 </body>
 

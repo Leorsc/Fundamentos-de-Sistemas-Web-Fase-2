@@ -34,7 +34,7 @@
 
     <main class="main-type-01">
       <div class="steps-container" id="steps-container"></div>
-      <form class="date-time-form" id="date-time-form">
+      <form class="service-form" id="service-form">
         <div class="pet-card">
           <div class="pet-info">
             <div class="pet-avatar">
@@ -42,44 +42,22 @@
             </div>
             <div class="pet-name-service">
               <strong class="pet-name">Zeca</strong>
-              <span class="pet-service">Banho & Tosa Higiênica (Hidratação)</span>
+              <span class="pet-service"></span>
             </div>
           </div>
-          <span class="pet-service-price">R$120,00</span>
         </div>
-        <h3 class="subtitle">Selecione a data</h3>
-        <div class="calendar-container">
-          <div class="calendar-header">
-            <button class="prev-month" type="button">
-              <img src="../../../assets/icons/arrow-left.svg" />
-            </button>
-            <span class="current-month-year" id="current-month-year"></span>
-            <button class="next-month" type="button">
-              <img src="../../../assets/icons/arrow-right.svg" />
-            </button>
-          </div>
+        <h3 class="subtitle">Selecione o serviço</h3>
+        <div class="services-container" id="services-container"></div>
 
+        <span>Escolha serviços adicionais (opcionais)</span>
+        <div class="additional-services-container" id="additional-services-container"></div>
 
-          <div class="calendar-weekdays">
-            <span>DOM</span><span>SEG</span><span>TER</span><span>QUA</span><span>QUI</span><span>SEX</span><span>SÁB</span>
-          </div>
-          <div class="calendar-days" id="calendar-days"></div>
-
+        <span>Observações (opcional)</span>
+        <div class="textarea-container">
+          <textarea id="observations" maxlength="250"
+            placeholder="Escreva aqui alguma informação importante sobre o serviço ou seu pet."></textarea>
+          <span class="char-count" id="char-count">0/250</span>
         </div>
-
-        <h3 class="subtitle">Selecione o horário</h3>
-        <div class="schedule-container">
-          <div class="morning-schedule">
-            <span>Manhã</span>
-            <div class="time-slots" id="morning-slots"></div>
-          </div>
-          <div class="separator-line"></div>
-          <div class="afternoon-schedule">
-            <span>Tarde</span>
-            <div class="time-slots" id="afternoon-slots"></div>
-          </div>
-        </div>
-
         <div class="fixed-actions-container">
           <div class="actions-buttons">
             <button class="btn-create" type="submit" id="submit-button" disabled>
@@ -149,7 +127,7 @@
 
   </div>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 
 </html>

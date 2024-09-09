@@ -67,7 +67,7 @@
   height: 40rem;
   width: 104.5rem;
   padding: 0 7.75rem;
-  background-image: url('./assets/images/banner-giant.png');
+  background-image: url('../../assets/images/banner-giant.png');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 1rem;

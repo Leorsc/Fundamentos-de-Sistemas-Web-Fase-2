@@ -1,0 +1,87 @@
+   <!-- <div class="header-type-01-container-01">
+        <img src="../../../assets/icons/user.svg" alt="cadeado" />
+        <span>Olá, John Smith</span>
+        <img class="" id="icon-open-modal-header" src="../../../assets/icons/arrow-down.svg" alt="flecha para baixo" />
+        <img class="hidden" id="icon-close-modal-header" src="../../../assets/icons/arrow-up.svg"
+          alt="flecha para cima" />
+        <div class="modal-header-type-01 hidden">
+          <span>Minha agenda</span>
+          <span>Meus dados</span>
+          <span>Meus pets</span>
+          <span>Sair da conta</span>
+        </div>
+      </div> -->
+
+      const modalHeader = document.querySelector('.modal-header-type-01');
+const iconOpenModalHeader = document.getElementById('icon-open-modal-header');
+const iconCloseModalHeader = document.getElementById('icon-close-modal-header');
+
+document.addEventListener('click', (event) => {
+  const isClickInsideModal = modalHeader.contains(event.target);
+  const isClickOnButton = iconOpenModalHeader.contains(event.target);
+
+  if (!isClickInsideModal && !isClickOnButton) {
+    closeModal();
+  }
+});
+
+iconOpenModalHeader.addEventListener('click', (event) => {
+  event.stopPropagation();
+  openModal()
+});
+
+iconCloseModalHeader.addEventListener('click', (event) => {
+  event.stopPropagation();
+  closeModal()
+});
+
+function openModal() {
+  modalHeader.classList.remove('hidden');
+  iconOpenModalHeader.classList.add('hidden')
+  iconCloseModalHeader.classList.remove('hidden')
+}
+
+function closeModal() {
+  modalHeader.classList.add('hidden');
+  iconOpenModalHeader.classList.remove('hidden')
+  iconCloseModalHeader.classList.add('hidden')
+}
+
+
+
+const carousel = document.querySelector('.carousel');
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
+
+let currentIndex = 0;
+
+// Função para atualizar a posição do carrossel
+function updateCarousel() {
+  const offset = -(currentIndex * (1300 + 56) - (1920 - 1300) / 2);
+  carousel.style.transform = `translateX(${offset}px)`;
+
+  // Remove blur de todos os itens
+  items.forEach(item => item.classList.remove('carousel-item-blur'));
+
+  // Adiciona blur aos itens laterais
+  const prevItem = (currentIndex - 1 + totalItems) % totalItems;
+  const nextItem = (currentIndex + 1) % totalItems;
+  items[prevItem].classList.add('carousel-item-blur');
+  items[nextItem].classList.add('carousel-item-blur');
+}
+
+// Botões de navegação
+document.querySelector('.next').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % totalItems;
+  updateCarousel();
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+  updateCarousel();
+});
+
+// Inicializa o carrossel
+updateCarousel();
+
+
